@@ -1,8 +1,7 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono,Roboto } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/main/Header";
 import Header from "@/components/main/Header";
+import type { Metadata } from "next";
+import { Bricolage_Grotesque, Geist, Geist_Mono, Roboto } from "next/font/google";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,6 +17,13 @@ const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "500", "700"], // choose what you need
   variable: "--font-roboto",
+  display: "swap",
+});
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-bricolage",
   display: "swap",
 });
 

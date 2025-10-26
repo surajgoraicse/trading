@@ -14,15 +14,26 @@ import {
 	Menu,
 	Youtube
 } from "lucide-react";
+import { Bricolage_Grotesque } from "next/font/google";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { BsCoin } from "react-icons/bs";
 import { FaDownload } from "react-icons/fa";
 import { IoIosTrophy } from "react-icons/io";
+
 import { LuUserPlus } from "react-icons/lu";
 import { MdContactSupport, MdRocketLaunch } from "react-icons/md";
 import { RiTeamFill } from "react-icons/ri";
 import { TbArrowsDiff } from "react-icons/tb";
+import { AnimatedThemeToggler } from "../ui/animated-theme-toggler";
+
+const bricolage = Bricolage_Grotesque({
+	subsets: ["latin"],
+	weight: ["400", "500", "700"],
+	variable: "--font-bricolage",
+	display: "swap",
+});
 
 export default function MobileView() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -64,27 +75,38 @@ export default function MobileView() {
             transition-all duration-300
           "
 				>
-					<div>
+					<div className="flex flex-col gap-3">
 						{/* Logo / Site Name */}
 						<div className="flex items-center justify-between mb-4">
 							<Link
 								href="/"
-								className="text-2xl font-bold text-pink-600 dark:text-blue-400"
+								className="text-2xl font-bold text-pink-600 dark:text-blue-400 flex items-center gap-2 transition-colors"
 							>
-								ShopVerse
+								<Image alt="logo" src={"/logo-new.png"} width={50} height={50}></Image>
+								<p className="">
+
+									Rich Trader
+								</p>
 							</Link>
 						</div>
 
 						{/* Profile Section */}
-						<div className="flex items-center gap-4">
-							<Avatar className="h-9 w-9 lg:h-8 lg:w-8 rounded-full overflow-hidden">
-								<AvatarImage src="./avatar.png" />
-								<AvatarFallback>D</AvatarFallback>
-							</Avatar>
-							<div className="relative">
-								<h3 className="scroll-m-20 text-md font-medium tracking-tight text-gray-700 dark:text-gray-100">Dev Gorai</h3>
-								<p className="text-muted-foreground text-[11px] ">NSU2429423</p>
+						<div className="flex items-center justify-between ">
+							<div className="flex items-center gap-4">
+								<Avatar className="h-9 w-9 lg:h-8 lg:w-8 rounded-full overflow-hidden">
+									<AvatarImage src="./avatar.png" />
+									<AvatarFallback>D</AvatarFallback>
+								</Avatar>
+								<div className="relative">
+									<h3 className="scroll-m-20 text-md font-medium tracking-tight text-gray-700 dark:text-gray-100">Dev Gorai</h3>
+									<p className="text-muted-foreground text-[11px] ">NSU2429423</p>
+								</div>
 							</div>
+							<div className="rounded-full  border p-2 flex items-center justify-center">
+
+								<AnimatedThemeToggler />
+							</div>
+
 
 						</div>
 
@@ -96,7 +118,7 @@ export default function MobileView() {
 							/>
 						</div> */}
 
-						<Separator className="my-4  dark:bg-slate-700" />
+						<Separator className="  dark:bg-slate-700" />
 
 						{/* Navigation Links with click effect */}
 
@@ -152,6 +174,7 @@ export default function MobileView() {
 
 					{/* Footer Section */}
 					<div className="mt-6 space-y-4">
+
 						<Separator className="dark:bg-slate-700" />
 						<div className="flex justify-center gap-5">
 							<Link

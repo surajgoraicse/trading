@@ -1,12 +1,10 @@
 "use client";
-import { Button } from "@/components/ui/button";
 // import { authClient, signOut } from "@/lib/auth-client";
-import { LogOut, Shield, ShoppingBag, User } from "lucide-react";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import MobileView from "./MobileView";
-import MyNavigationMenu from "./MyNavigationMenu";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import MobileView from "./MobileView";
 
 const Header = () => {
 	const [isAdmin, setIsAdmin] = useState<boolean>(false);
@@ -51,8 +49,9 @@ const Header = () => {
 				<div className="flex items-center px-5 lg:px-8  justify-between py-3">
 					{/* Logo */}
 					<Link href="/" className="flex items-center space-x-2">
+						<Image alt="logo" src={"/logo-new.png"} width={50} height={50}></Image>
 						<h1 className="text-2xl md:text-3xl font-display font-bold tracking-tight">
-							Reecate
+							Rich Trader
 						</h1>
 					</Link>
 

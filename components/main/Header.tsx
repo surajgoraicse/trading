@@ -44,8 +44,8 @@ const Header = () => {
 
 
 	return (
-		<header className="sticky mt-5 top-0 px-4 z-50 bg-background/95 backdrop-blur-sm ">
-			<div className="max-w-3xl mx-auto  border rounded-4xl ">
+		<header className="sticky mt-5  top-5 px-4 z-50 ">
+			<div className="max-w-3xl mx-auto  bg-background/95 backdrop-blur-sm  border rounded-4xl ">
 				<div className="flex items-center px-5 lg:px-8  justify-between py-3">
 					{/* Logo */}
 					<Link href="/" className="flex items-center space-x-2">

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -40,12 +41,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${roboto.variable} antialiased`}
-      >
-        <Header />
-        {children}
-      </body>
-    </html>
+  <body
+    className={`min-h-screen w-full relative dark:bg-black ${bricolage.variable} ${geistSans.variable} ${geistMono.variable} font-bricolage antialiased`}
+  >
+    <div
+      className={`
+        absolute inset-0 z-0 
+        [background:radial-gradient(125%_125%_at_50%_90%,#fff_40%,#6366f1_100%)]
+        dark:[background:radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(139,92,246,0.25),transparent_70%),#000]
+      `}
+    >
+      <Header />
+      {children}
+    </div>
+  </body>
+</html>
+
   );
 }

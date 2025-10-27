@@ -31,7 +31,7 @@ export default function TaskListItem({
   // Adjusted gradients for better visibility in dark mode
   const gradient = isDark
     ? `linear-gradient(90deg, ${color}66, ${color}AA)` // stronger opacity for dark
-    : `linear-gradient(90deg, ${color}22, ${color}66)`; // soft for light mode
+    : `linear-gradient(90deg, ${color}44, ${color}88)`; // soft for light mode
 
   return (
     <motion.div

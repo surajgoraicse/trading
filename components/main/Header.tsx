@@ -4,6 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { AnimatedThemeToggler } from "../ui/animated-theme-toggler";
 import MobileView from "./MobileView";
 
 const Header = () => {
@@ -58,6 +59,11 @@ const Header = () => {
 
 
 					<div className="flex items-center space-x-2 lg:space-x-4">
+						<div className="hidden  rounded-full border md:flex items-center justify-center p-1 hover:bg-blue-50 dark:hover:bg-gray-900">
+
+							<AnimatedThemeToggler />
+						</div>
+
 
 						<Avatar className="h-9 w-9 lg:h-8 lg:w-8 rounded-full overflow-hidden">
 							<AvatarImage src="./avatar.png" />

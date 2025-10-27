@@ -30,7 +30,7 @@ const HeroCard = () => {
           </div>
         </div>
         <Button
-          variant="ghost"
+          variant="outline"
           size="icon"
           className="
             rounded-full border border-transparent hover:border-accent
@@ -45,8 +45,8 @@ const HeroCard = () => {
       <CardContent>
         <div className="flex items-end justify-between">
           <div>
-            <p className="text-xs font-medium text-muted-foreground">
-              PORTFOLIO
+            <p className="text-s font-medium text-muted-foreground">
+              Total Balance : 
             </p>
             <p className="text-3xl font-bold tracking-tight text-foreground">
               $5,271.39

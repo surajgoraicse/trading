@@ -53,7 +53,8 @@ export default function MobileView() {
 	];
 
 	return (
-		<div className="md:hidden">
+		<div className="md:hidden   ">
+
 			<Sheet open={isOpen} onOpenChange={setIsOpen}>
 				<SheetTrigger asChild>
 					<Button
@@ -67,12 +68,14 @@ export default function MobileView() {
 
 				<SheetContent
 					side="right"
-					className="
+					className=" 
             w-[80%] sm:w-[400px] 
             bg-linear-to-b from-pink-100 via-white to-blue-100 
             dark:from-slate-900 dark:via-slate-950 dark:to-slate-900
             border-l-0 shadow-2xl p-6 flex flex-col justify-between
             transition-all duration-300
+			 [background:radial-gradient(125%_125%_at_50%_90%,#fff_40%,#6366f1_100%)]
+        dark:[background:radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(139,92,246,0.25),transparent_70%),#000]
           "
 				>
 					<div className="flex flex-col gap-3">

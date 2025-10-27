@@ -74,7 +74,7 @@ export default function MobileView() {
             dark:from-slate-900 dark:via-slate-950 dark:to-slate-900
             border-l-0 shadow-2xl p-6 flex flex-col justify-between
             transition-all duration-300
-			 [background:radial-gradient(125%_125%_at_50%_90%,#fff_40%,#6366f1_100%)]
+	
         dark:[background:radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(139,92,246,0.25),transparent_70%),#000]
           "
 				>

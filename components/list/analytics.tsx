@@ -22,7 +22,7 @@ export default function CardSelector() {
   const [selected, setSelected] = useState("all")
 
   return (
-    <div className="flex flex-col items-center w-full max-w-md mx-auto space-y-4 mt-4">
+    <div className="flex flex-col items-center w-full max-w-md mx-auto space-y-4 mt-4 mb-5">
       <Select onValueChange={(v) => setSelected(v)} defaultValue="all">
         <SelectTrigger className="w-full rounded-xl">
           <SelectValue placeholder="Select Card" />

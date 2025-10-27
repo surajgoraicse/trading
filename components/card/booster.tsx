@@ -298,8 +298,10 @@ export default function BoosterProgressCard({
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="flex justify-between">
-
-            <h3 className="text-base font-semibold">Booster Conditions <span className="text-xs text-muted-foreground"> (Within 30 Days)</span></h3>
+            <div>
+              <h3 className="text-lg font-semibold">Booster Conditions</h3>
+              <span className="text-xs text-muted-foreground"> (Within 30 Days)</span>
+            </div>
             <div className="flex flex-col items-end gap-3">
               <StatusBadge active={allComplete && timePercent > 0} />
             </div>
@@ -315,7 +317,7 @@ export default function BoosterProgressCard({
       <div className="mt-4 flex flex-col md:flex-row md:items-center gap-6">
         {/* Circle */}
         <div className="shrink-0">
-          <CountdownCircle percent={timePercent} remainingSeconds={60*60*24*18} />
+          <CountdownCircle percent={timePercent} remainingSeconds={60 * 60 * 24 * 18} />
         </div>
 
         {/* Details / tasks */}
@@ -323,7 +325,7 @@ export default function BoosterProgressCard({
           <div className="grid gap-4">
 
             <div className="space-y-4">
-          
+
               <ProgressList />
             </div>
 

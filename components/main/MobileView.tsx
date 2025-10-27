@@ -53,7 +53,7 @@ export default function MobileView() {
 	];
 
 	return (
-		<div className="md:hidden   ">
+		<div className="md:hidden">
 
 			<Sheet open={isOpen} onOpenChange={setIsOpen}>
 				<SheetTrigger asChild>
@@ -68,8 +68,8 @@ export default function MobileView() {
 
 				<SheetContent
 					side="right"
-					className=" 
-            w-[80%] sm:w-[400px] 
+					className=" h-full
+            w-[80%] sm:w-[400px]  
             bg-linear-to-b from-pink-100 via-white to-blue-100 
             dark:from-slate-900 dark:via-slate-950 dark:to-slate-900
             border-l-0 shadow-2xl p-6 flex flex-col justify-between
